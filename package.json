@@ -1,0 +1,81 @@
+{
+  "name": "@samasante/liquid-glass",
+  "version": "0.1.0",
+  "description": "A headless React liquid-glass lens that refracts the live DOM. Apple-style Liquid Glass that works in Chrome, Safari, and Firefox. Zero runtime dependencies.",
+  "license": "MIT",
+  "author": "Sam Asante",
+  "type": "module",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "liquid-glass",
+    "glass",
+    "glassmorphism",
+    "refraction",
+    "lens",
+    "displacement-map",
+    "feDisplacementMap",
+    "chromatic-aberration",
+    "svg-filter",
+    "frosted-glass",
+    "apple",
+    "react",
+    "headless",
+    "safari",
+    "firefox",
+    "cross-browser",
+    "live-dom",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samasante/liquid-glass.git"
+  },
+  "homepage": "https://github.com/samasante/liquid-glass#readme",
+  "bugs": {
+    "url": "https://github.com/samasante/liquid-glass/issues"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "prettier": "^3.8.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@10.28.2",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      # Package: typecheck + build (emits dist used by the recipe typecheck).
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm build
+
+      # Site + recipes: typecheck recipes/landing against the shipped types,
+      # and confirm the static landing builds.
+      - run: pnpm --dir site install --frozen-lockfile
+      - run: pnpm --dir site typecheck
+      - run: pnpm --dir site build

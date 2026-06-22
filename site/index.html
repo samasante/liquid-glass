@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>liquid-glass — refract the live DOM, in every browser</title>
+    <meta
+      name="description"
+      content="Apple-style Liquid Glass for the web. A headless React lens that refracts the live page — real refraction in Safari, Firefox, and Chrome. Zero dependencies."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='38%25' cy='32%25' r='75%25'%3E%3Cstop offset='0' stop-color='%23bcdcf5'/%3E%3Cstop offset='0.55' stop-color='%235c93c4'/%3E%3Cstop offset='1' stop-color='%231d3e5c'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='14' fill='url(%23g)'/%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%23ffffff' stroke-opacity='0.55' stroke-width='1.5'/%3E%3Cellipse cx='11.5' cy='10.5' rx='5' ry='3' fill='%23ffffff' fill-opacity='0.45'/%3E%3C/svg%3E"
+    />
+    <!-- Social / SEO. Absolute URLs use the deploy domain (glass.samasante.com) —
+         X/Slack need absolute image URLs for previews; update if the domain changes. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://glass.samasante.com/" />
+    <meta
+      property="og:title"
+      content="Liquid Glass for the web — refract the live DOM, in every browser"
+    />
+    <meta
+      property="og:description"
+      content="A headless React lens that refracts the live page — real refraction in Safari, Firefox, and Chrome. Zero dependencies."
+    />
+    <meta property="og:image" content="https://glass.samasante.com/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@samasante" />
+    <meta
+      name="twitter:title"
+      content="Liquid Glass for the web — refract the live DOM, in every browser"
+    />
+    <meta
+      name="twitter:description"
+      content="A headless React lens that refracts the live page — real refraction in Safari, Firefox, and Chrome. Zero dependencies."
+    />
+    <meta name="twitter:image" content="https://glass.samasante.com/og.jpg" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 70px;
+      }
+      html,
+      body,
+      #root {
+        height: 100%;
+      }
+      ::selection {
+        background: rgba(255, 255, 255, 0.22);
+      }
+      /* Keyboard-only focus ring baseline for the site chrome (buttons + links).
+         Pointer interactions stay ring-free via :focus-visible. */
+      button:focus-visible,
+      a:focus-visible {
+        outline: 2px solid #4c9aff;
+        outline-offset: 2px;
+      }
+      /* The glass switch/slider hide their native input (clipped), which also clips
+         the native focus ring — surface it on the wrapper for keyboard users. */
+      .mac-glass-control:has(:focus-visible) {
+        outline: 2px solid #4c9aff;
+        outline-offset: 3px;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        background: #060607;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

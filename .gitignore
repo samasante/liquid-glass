@@ -1,0 +1,11 @@
+node_modules
+dist
+*.tsbuildinfo
+.DS_Store
+.context
+# site build output
+site/dist
+# local test artifacts
+*.local.png
+.vscode
+.idea

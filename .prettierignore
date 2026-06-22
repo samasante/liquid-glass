@@ -1,0 +1,14 @@
+# build output + deps
+node_modules
+dist
+site/dist
+site/node_modules
+*.tsbuildinfo
+
+# lockfiles + binary assets
+pnpm-lock.yaml
+docs
+site/public
+
+# docs are hand-curated prose/tables — keep Prettier off them
+*.md
