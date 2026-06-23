@@ -4,6 +4,12 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] — 2026-06-23
+
+### Changed
+
+- `homepage` now points to the live demo + docs site (glass.samasante.com).
+
 ## [0.1.0] — 2026-06-22
 
 First public release.

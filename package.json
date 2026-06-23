@@ -1,6 +1,6 @@
 {
   "name": "@samasante/liquid-glass",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A headless React liquid-glass lens that refracts the live DOM. Apple-style Liquid Glass that works in Chrome, Safari, and Firefox. Zero runtime dependencies.",
   "license": "MIT",
   "author": "Sam Asante",
@@ -55,7 +55,7 @@
     "type": "git",
     "url": "git+https://github.com/samasante/liquid-glass.git"
   },
-  "homepage": "https://github.com/samasante/liquid-glass#readme",
+  "homepage": "https://glass.samasante.com",
   "bugs": {
     "url": "https://github.com/samasante/liquid-glass/issues"
   },
